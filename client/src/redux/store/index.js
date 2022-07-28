@@ -1,11 +1,10 @@
-import { applyMiddleware, createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
-import rootReducer from '../reducer';
+import { configureStore } from '@reduxjs/toolkit'
+import textSlice from '../slices/textSlice'
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+const store = configureStore({
+  reducer: {
+    text: textSlice,
+  },
+})
 
-export default store;
+export default store

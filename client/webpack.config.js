@@ -27,7 +27,7 @@ module.exports = {
   module: { rules },
   devServer: {
     open: true,
-    port: 3001,
+    port: 3002,
     compress: true,
   } 
 }
